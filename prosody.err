@@ -1,0 +1,59 @@
+May 23 14:35:16 certmanager	error	Error indexing certificate directory ./certs: cannot open ./certs: No such file or directory
+May 23 14:35:16 mod_posix	error	Couldn't write pidfile at /var/lib/prosody/prosody.pid; /var/lib/prosody/prosody.pid: Permission denied
+May 23 14:35:16 modulemanager	error	Error initializing module 'posix' on 'localhost': /usr/lib/prosody/util/startup.lua:357: attempt to index a nil value (field 'main_thread')
+	stack traceback:
+	/usr/lib/prosody/util/startup.lua:357: in field 'shutdown'
+	/usr/lib/prosody/modules/mod_posix.lua:64: in local 'write_pidfile'
+	/usr/lib/prosody/modules/mod_posix.lua:123: in main chunk
+	[C]: in function 'util.xpcall.xpcall'
+	/usr/lib/prosody/core/modulemanager.lua:270: in upvalue 'do_load_module'
+	/usr/lib/prosody/core/modulemanager.lua:353: in function 'core.modulemanager.load'
+	/usr/lib/prosody/core/modulemanager.lua:131: in function 'core.modulemanager.load_modules_for_host'
+	/usr/lib/prosody/util/events.lua:81: in function </usr/lib/prosody/util/events.lua:77>
+	(...tail calls...)
+	/usr/lib/prosody/core/hostmanager.lua:108: in function 'core.hostmanager.activate'
+	/usr/lib/prosody/core/hostmanager.lua:58: in field '?'
+	/usr/lib/prosody/util/events.lua:81: in function </usr/lib/prosody/util/events.lua:77>
+	(...tail calls...)
+	/usr/lib/prosody/util/startup.lua:428: in function 'util.startup.prepare_to_start'
+	/usr/lib/prosody/util/startup.lua:707: in function 'util.startup.prosody'
+	/usr/lib/prosody/util/async.lua:156: in upvalue 'func'
+	/usr/lib/prosody/util/async.lua:144: in function </usr/lib/prosody/util/async.lua:142>
+May 23 14:35:24 certmanager	error	Error indexing certificate directory ./certs: cannot open ./certs: No such file or directory
+May 23 14:35:26 startup	error	Couldn't read the config file when trying to reload: my_prosody.cfg.lua: No such file or directory
+May 23 14:36:17 certmanager	error	Error indexing certificate directory ./certs: cannot open ./certs: No such file or directory
+May 23 14:36:19 startup	error	Couldn't read the config file when trying to reload: my_prosody.cfg.lua: No such file or directory
+May 23 14:36:35 certmanager	error	Error indexing certificate directory ./certs: cannot open ./certs: No such file or directory
+May 23 14:36:37 startup	error	Couldn't read the config file when trying to reload: my_prosody.cfg.lua: No such file or directory
+May 23 14:37:18 certmanager	error	Error indexing certificate directory ./certs: cannot open ./certs: No such file or directory
+May 23 14:37:30 startup	error	Couldn't read the config file when trying to reload: my_prosody.cfg.lua: No such file or directory
+May 23 14:38:23 certmanager	error	Error indexing certificate directory ./certs: cannot open ./certs: No such file or directory
+May 23 14:38:23 certmanager	error	SSL/TLS: Failed to load './localhost.key': Check that the file exists and the permissions are correct (for client_https port 0)
+May 23 14:38:23 certmanager	error	SSL/TLS: Failed to load './localhost.key': Previous error (see logs), or other system error. (for localhost)
+May 23 14:38:23 localhost:tls	error	Error creating context for c2s: error loading private key (system lib)
+May 23 14:38:23 certmanager	error	SSL/TLS: Failed to load './localhost.key': Previous error (see logs), or other system error. (for localhost)
+May 23 14:38:23 localhost:tls	error	Error creating contexts for s2sout: error loading private key (system lib)
+May 23 14:38:23 certmanager	error	SSL/TLS: Failed to load './localhost.key': Check that the file exists and the permissions are correct (for localhost)
+May 23 14:38:23 localhost:tls	error	Error creating contexts for s2sin: error loading private key ((null))
+May 23 14:38:33 startup	error	Couldn't read the config file when trying to reload: my_prosody.cfg.lua: No such file or directory
+May 23 14:39:07 certmanager	error	Error indexing certificate directory ./certs: cannot open ./certs: No such file or directory
+May 23 14:39:07 certmanager	error	SSL/TLS: Failed to load './localhost.key': Check that the file exists and the permissions are correct (for client_https port 0)
+May 23 14:39:07 certmanager	error	SSL/TLS: Failed to load './localhost.key': Previous error (see logs), or other system error. (for localhost)
+May 23 14:39:07 localhost:tls	error	Error creating context for c2s: error loading private key (system lib)
+May 23 14:39:07 certmanager	error	SSL/TLS: Failed to load './localhost.key': Previous error (see logs), or other system error. (for localhost)
+May 23 14:39:07 localhost:tls	error	Error creating contexts for s2sout: error loading private key (system lib)
+May 23 14:39:07 certmanager	error	SSL/TLS: Failed to load './localhost.key': Check that the file exists and the permissions are correct (for localhost)
+May 23 14:39:07 localhost:tls	error	Error creating contexts for s2sin: error loading private key ((null))
+May 23 14:39:12 c2s5608fb453c20	error	No TLS context available for c2s. Earlier error was: error loading private key (system lib)
+May 23 14:39:12 startup	error	Couldn't read the config file when trying to reload: my_prosody.cfg.lua: No such file or directory
+May 23 14:39:23 certmanager	error	Error indexing certificate directory ./certs: cannot open ./certs: No such file or directory
+May 23 14:39:23 certmanager	error	SSL/TLS: Failed to load './localhost.key': Check that the file exists and the permissions are correct (for localhost)
+May 23 14:39:23 localhost:tls	error	Error creating context for c2s: error loading private key ((null))
+May 23 14:39:23 certmanager	error	SSL/TLS: Failed to load './localhost.key': Previous error (see logs), or other system error. (for localhost)
+May 23 14:39:23 localhost:tls	error	Error creating contexts for s2sout: error loading private key (system lib)
+May 23 14:39:23 certmanager	error	SSL/TLS: Failed to load './localhost.key': Previous error (see logs), or other system error. (for localhost)
+May 23 14:39:23 localhost:tls	error	Error creating contexts for s2sin: error loading private key (system lib)
+May 23 14:39:29 c2s55a0f6bb1ab0	error	No TLS context available for c2s. Earlier error was: error loading private key ((null))
+May 23 14:39:29 startup	error	Couldn't read the config file when trying to reload: my_prosody.cfg.lua: No such file or directory
+May 23 14:40:01 certmanager	error	Error indexing certificate directory ./certs: cannot open ./certs: No such file or directory
+May 23 14:43:16 startup	error	Couldn't read the config file when trying to reload: my_prosody.cfg.lua: No such file or directory

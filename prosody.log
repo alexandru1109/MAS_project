@@ -1,0 +1,481 @@
+May 23 14:35:16 startup	info	Hello and welcome to Prosody version 0.12.4
+May 23 14:35:16 certmanager	error	Error indexing certificate directory ./certs: cannot open ./certs: No such file or directory
+May 23 14:35:16 startup	info	Prosody is using the epoll backend for connection handling
+May 23 14:35:16 portmanager	info	Activated service 'c2s' on [*]:5223, [::]:5223
+May 23 14:35:16 portmanager	info	Activated service 'c2s_direct_tls' on no ports
+May 23 14:35:16 portmanager	info	Activated service 'legacy_ssl' on no ports
+May 23 14:35:16 certmanager	info	No certificate present in SSL/TLS configuration for localhost. SNI will be required.
+May 23 14:35:16 certmanager	info	No certificate present in SSL/TLS configuration for localhost. SNI will be required.
+May 23 14:35:16 localhost:tls	info	Certificates loaded
+May 23 14:35:16 portmanager	info	Activated service 's2s' on [*]:5270, [::]:5270
+May 23 14:35:16 portmanager	info	Activated service 's2s_direct_tls' on no ports
+May 23 14:35:16 mod_posix	error	Couldn't write pidfile at /var/lib/prosody/prosody.pid; /var/lib/prosody/prosody.pid: Permission denied
+May 23 14:35:16 startup	info	Shutting down: Couldn't write pidfile
+May 23 14:35:16 portmanager	info	Deactivated service 'c2s'
+May 23 14:35:16 portmanager	info	Deactivated service 'c2s_direct_tls'
+May 23 14:35:16 portmanager	info	Deactivated service 'legacy_ssl'
+May 23 14:35:16 portmanager	info	Deactivated service 's2s'
+May 23 14:35:16 portmanager	info	Deactivated service 's2s_direct_tls'
+May 23 14:35:16 modulemanager	error	Error initializing module 'posix' on 'localhost': /usr/lib/prosody/util/startup.lua:357: attempt to index a nil value (field 'main_thread')
+	stack traceback:
+	/usr/lib/prosody/util/startup.lua:357: in field 'shutdown'
+	/usr/lib/prosody/modules/mod_posix.lua:64: in local 'write_pidfile'
+	/usr/lib/prosody/modules/mod_posix.lua:123: in main chunk
+	[C]: in function 'util.xpcall.xpcall'
+	/usr/lib/prosody/core/modulemanager.lua:270: in upvalue 'do_load_module'
+	/usr/lib/prosody/core/modulemanager.lua:353: in function 'core.modulemanager.load'
+	/usr/lib/prosody/core/modulemanager.lua:131: in function 'core.modulemanager.load_modules_for_host'
+	/usr/lib/prosody/util/events.lua:81: in function </usr/lib/prosody/util/events.lua:77>
+	(...tail calls...)
+	/usr/lib/prosody/core/hostmanager.lua:108: in function 'core.hostmanager.activate'
+	/usr/lib/prosody/core/hostmanager.lua:58: in field '?'
+	/usr/lib/prosody/util/events.lua:81: in function </usr/lib/prosody/util/events.lua:77>
+	(...tail calls...)
+	/usr/lib/prosody/util/startup.lua:428: in function 'util.startup.prepare_to_start'
+	/usr/lib/prosody/util/startup.lua:707: in function 'util.startup.prosody'
+	/usr/lib/prosody/util/async.lua:156: in upvalue 'func'
+	/usr/lib/prosody/util/async.lua:144: in function </usr/lib/prosody/util/async.lua:142>
+May 23 14:35:24 startup	info	Hello and welcome to Prosody version 0.12.4
+May 23 14:35:24 certmanager	error	Error indexing certificate directory ./certs: cannot open ./certs: No such file or directory
+May 23 14:35:24 startup	info	Prosody is using the epoll backend for connection handling
+May 23 14:35:24 certmanager	info	No certificate present in SSL/TLS configuration for localhost. SNI will be required.
+May 23 14:35:24 certmanager	info	No certificate present in SSL/TLS configuration for localhost. SNI will be required.
+May 23 14:35:24 localhost:tls	info	Certificates loaded
+May 23 14:35:24 portmanager	info	Activated service 's2s' on [::]:5270, [*]:5270
+May 23 14:35:24 portmanager	info	Activated service 's2s_direct_tls' on no ports
+May 23 14:35:24 portmanager	info	Activated service 'c2s' on [::]:5223, [*]:5223
+May 23 14:35:24 portmanager	info	Activated service 'c2s_direct_tls' on no ports
+May 23 14:35:24 portmanager	info	Activated service 'legacy_ssl' on no ports
+May 23 14:35:26 mod_posix	info	Received SIGHUP
+May 23 14:35:26 startup	info	Reloading configuration file
+May 23 14:35:26 startup	error	Couldn't read the config file when trying to reload: my_prosody.cfg.lua: No such file or directory
+May 23 14:35:51 c2s5578f51490b0	info	Client connected
+May 23 14:35:51 c2s5578f51490b0	info	Client disconnected: no shared cipher
+May 23 14:36:11 mod_posix	warn	Received SIGTERM
+May 23 14:36:11 startup	info	Shutting down: Received SIGTERM
+May 23 14:36:11 portmanager	info	Deactivated service 'c2s'
+May 23 14:36:11 portmanager	info	Deactivated service 'c2s_direct_tls'
+May 23 14:36:11 portmanager	info	Deactivated service 'legacy_ssl'
+May 23 14:36:11 portmanager	info	Deactivated service 's2s'
+May 23 14:36:11 portmanager	info	Deactivated service 's2s_direct_tls'
+May 23 14:36:11 general	info	Shutting down...
+May 23 14:36:11 general	info	Shutdown status: Cleaning up
+May 23 14:36:11 general	info	Shutdown complete
+May 23 14:36:17 startup	info	Hello and welcome to Prosody version 0.12.4
+May 23 14:36:17 certmanager	error	Error indexing certificate directory ./certs: cannot open ./certs: No such file or directory
+May 23 14:36:17 startup	info	Prosody is using the epoll backend for connection handling
+May 23 14:36:17 certmanager	info	No certificate present in SSL/TLS configuration for localhost. SNI will be required.
+May 23 14:36:17 certmanager	info	No certificate present in SSL/TLS configuration for localhost. SNI will be required.
+May 23 14:36:17 localhost:tls	info	Certificates loaded
+May 23 14:36:17 portmanager	info	Activated service 's2s' on [::]:5270, [*]:5270
+May 23 14:36:17 portmanager	info	Activated service 's2s_direct_tls' on no ports
+May 23 14:36:17 portmanager	info	Activated service 'c2s' on [::]:5223, [*]:5223
+May 23 14:36:17 portmanager	info	Activated service 'c2s_direct_tls' on no ports
+May 23 14:36:17 portmanager	info	Activated service 'legacy_ssl' on no ports
+May 23 14:36:19 mod_posix	info	Received SIGHUP
+May 23 14:36:19 startup	info	Reloading configuration file
+May 23 14:36:19 startup	error	Couldn't read the config file when trying to reload: my_prosody.cfg.lua: No such file or directory
+May 23 14:36:35 startup	info	Hello and welcome to Prosody version 0.12.4
+May 23 14:36:35 certmanager	error	Error indexing certificate directory ./certs: cannot open ./certs: No such file or directory
+May 23 14:36:35 startup	info	Prosody is using the epoll backend for connection handling
+May 23 14:36:35 portmanager	info	Activated service 's2s' on [::]:5270, [*]:5270
+May 23 14:36:35 portmanager	info	Activated service 's2s_direct_tls' on no ports
+May 23 14:36:35 portmanager	info	Activated service 'c2s' on [::]:5223, [*]:5223
+May 23 14:36:35 portmanager	info	Activated service 'c2s_direct_tls' on no ports
+May 23 14:36:35 portmanager	info	Activated service 'legacy_ssl' on no ports
+May 23 14:36:37 mod_posix	info	Received SIGHUP
+May 23 14:36:37 startup	info	Reloading configuration file
+May 23 14:36:37 startup	error	Couldn't read the config file when trying to reload: my_prosody.cfg.lua: No such file or directory
+May 23 14:36:49 c2s56402d758290	info	Client connected
+May 23 14:36:49 c2s56402d758290	info	User account created: amab_tl_a0@localhost
+May 23 14:36:49 c2s56402d758290	info	Client disconnected: connection closed
+May 23 14:37:18 startup	info	Hello and welcome to Prosody version 0.12.4
+May 23 14:37:18 certmanager	error	Error indexing certificate directory ./certs: cannot open ./certs: No such file or directory
+May 23 14:37:18 startup	info	Prosody is using the epoll backend for connection handling
+May 23 14:37:18 portmanager	info	Activated service 's2s' on [::]:5270, [*]:5270
+May 23 14:37:18 portmanager	info	Activated service 's2s_direct_tls' on no ports
+May 23 14:37:18 portmanager	info	Activated service 'c2s' on [::]:5223, [*]:5223
+May 23 14:37:18 portmanager	info	Activated service 'c2s_direct_tls' on no ports
+May 23 14:37:18 portmanager	info	Activated service 'legacy_ssl' on no ports
+May 23 14:37:30 c2s55996e98ed10	info	Client connected
+May 23 14:37:30 c2s55996e98ed10	info	User account created: amab_tl_a0@localhost
+May 23 14:37:30 c2s55996e98ed10	info	Client disconnected: connection closed
+May 23 14:37:30 mod_posix	info	Received SIGHUP
+May 23 14:37:30 startup	info	Reloading configuration file
+May 23 14:37:30 startup	error	Couldn't read the config file when trying to reload: my_prosody.cfg.lua: No such file or directory
+May 23 14:38:23 startup	info	Hello and welcome to Prosody version 0.12.4
+May 23 14:38:23 certmanager	error	Error indexing certificate directory ./certs: cannot open ./certs: No such file or directory
+May 23 14:38:23 certmanager	error	SSL/TLS: Failed to load './localhost.key': Check that the file exists and the permissions are correct (for client_https port 0)
+May 23 14:38:23 startup	info	Prosody is using the epoll backend for connection handling
+May 23 14:38:23 certmanager	error	SSL/TLS: Failed to load './localhost.key': Previous error (see logs), or other system error. (for localhost)
+May 23 14:38:23 localhost:tls	error	Error creating context for c2s: error loading private key (system lib)
+May 23 14:38:23 certmanager	error	SSL/TLS: Failed to load './localhost.key': Previous error (see logs), or other system error. (for localhost)
+May 23 14:38:23 localhost:tls	error	Error creating contexts for s2sout: error loading private key (system lib)
+May 23 14:38:23 certmanager	error	SSL/TLS: Failed to load './localhost.key': Check that the file exists and the permissions are correct (for localhost)
+May 23 14:38:23 localhost:tls	error	Error creating contexts for s2sin: error loading private key ((null))
+May 23 14:38:23 localhost:tls	info	Certificates loaded
+May 23 14:38:23 portmanager	info	Activated service 'c2s' on [::]:5223, [*]:5223
+May 23 14:38:23 portmanager	info	Activated service 'c2s_direct_tls' on no ports
+May 23 14:38:23 portmanager	info	Activated service 'legacy_ssl' on no ports
+May 23 14:38:23 portmanager	info	Activated service 's2s' on [::]:5270, [*]:5270
+May 23 14:38:23 portmanager	info	Activated service 's2s_direct_tls' on no ports
+May 23 14:38:33 c2s55b43de07970	info	Client connected
+May 23 14:38:33 c2s55b43de07970	info	Client disconnected: connection closed
+May 23 14:38:33 mod_posix	info	Received SIGHUP
+May 23 14:38:33 startup	info	Reloading configuration file
+May 23 14:38:33 startup	error	Couldn't read the config file when trying to reload: my_prosody.cfg.lua: No such file or directory
+May 23 14:38:46 c2s55b43de2b290	info	Client connected
+May 23 14:38:46 c2s55b43de2b290	info	Client disconnected: connection closed
+May 23 14:39:07 startup	info	Hello and welcome to Prosody version 0.12.4
+May 23 14:39:07 certmanager	error	Error indexing certificate directory ./certs: cannot open ./certs: No such file or directory
+May 23 14:39:07 certmanager	error	SSL/TLS: Failed to load './localhost.key': Check that the file exists and the permissions are correct (for client_https port 0)
+May 23 14:39:07 startup	info	Prosody is using the epoll backend for connection handling
+May 23 14:39:07 portmanager	info	Activated service 's2s' on [::]:5271, [*]:5271
+May 23 14:39:07 portmanager	info	Activated service 's2s_direct_tls' on no ports
+May 23 14:39:07 portmanager	info	Activated service 'c2s' on [::]:5224, [*]:5224
+May 23 14:39:07 portmanager	info	Activated service 'c2s_direct_tls' on no ports
+May 23 14:39:07 portmanager	info	Activated service 'legacy_ssl' on no ports
+May 23 14:39:07 certmanager	error	SSL/TLS: Failed to load './localhost.key': Previous error (see logs), or other system error. (for localhost)
+May 23 14:39:07 localhost:tls	error	Error creating context for c2s: error loading private key (system lib)
+May 23 14:39:07 certmanager	error	SSL/TLS: Failed to load './localhost.key': Previous error (see logs), or other system error. (for localhost)
+May 23 14:39:07 localhost:tls	error	Error creating contexts for s2sout: error loading private key (system lib)
+May 23 14:39:07 certmanager	error	SSL/TLS: Failed to load './localhost.key': Check that the file exists and the permissions are correct (for localhost)
+May 23 14:39:07 localhost:tls	error	Error creating contexts for s2sin: error loading private key ((null))
+May 23 14:39:07 localhost:tls	info	Certificates loaded
+May 23 14:39:12 c2s5608fb453c20	info	Client connected
+May 23 14:39:12 c2s5608fb453c20	error	No TLS context available for c2s. Earlier error was: error loading private key (system lib)
+May 23 14:39:12 c2s5608fb453c20	warn	No stream features to offer on insecure session. Check encryption and security settings.
+May 23 14:39:12 c2s5608fb453c20	info	Client disconnected: connection closed
+May 23 14:39:12 mod_posix	info	Received SIGHUP
+May 23 14:39:12 startup	info	Reloading configuration file
+May 23 14:39:12 startup	error	Couldn't read the config file when trying to reload: my_prosody.cfg.lua: No such file or directory
+May 23 14:39:23 startup	info	Hello and welcome to Prosody version 0.12.4
+May 23 14:39:23 certmanager	error	Error indexing certificate directory ./certs: cannot open ./certs: No such file or directory
+May 23 14:39:23 startup	info	Prosody is using the epoll backend for connection handling
+May 23 14:39:23 portmanager	info	Activated service 'c2s' on [::]:5224, [*]:5224
+May 23 14:39:23 portmanager	info	Activated service 'c2s_direct_tls' on no ports
+May 23 14:39:23 portmanager	info	Activated service 'legacy_ssl' on no ports
+May 23 14:39:23 portmanager	info	Activated service 's2s' on [::]:5271, [*]:5271
+May 23 14:39:23 portmanager	info	Activated service 's2s_direct_tls' on no ports
+May 23 14:39:23 certmanager	error	SSL/TLS: Failed to load './localhost.key': Check that the file exists and the permissions are correct (for localhost)
+May 23 14:39:23 localhost:tls	error	Error creating context for c2s: error loading private key ((null))
+May 23 14:39:23 certmanager	error	SSL/TLS: Failed to load './localhost.key': Previous error (see logs), or other system error. (for localhost)
+May 23 14:39:23 localhost:tls	error	Error creating contexts for s2sout: error loading private key (system lib)
+May 23 14:39:23 certmanager	error	SSL/TLS: Failed to load './localhost.key': Previous error (see logs), or other system error. (for localhost)
+May 23 14:39:23 localhost:tls	error	Error creating contexts for s2sin: error loading private key (system lib)
+May 23 14:39:23 localhost:tls	info	Certificates loaded
+May 23 14:39:29 c2s55a0f6bb1ab0	info	Client connected
+May 23 14:39:29 c2s55a0f6bb1ab0	error	No TLS context available for c2s. Earlier error was: error loading private key ((null))
+May 23 14:39:29 c2s55a0f6bb1ab0	warn	No stream features to offer on insecure session. Check encryption and security settings.
+May 23 14:39:29 c2s55a0f6bb1ab0	info	Client disconnected: connection closed
+May 23 14:39:29 mod_posix	info	Received SIGHUP
+May 23 14:39:29 startup	info	Reloading configuration file
+May 23 14:39:29 startup	error	Couldn't read the config file when trying to reload: my_prosody.cfg.lua: No such file or directory
+May 23 14:40:01 startup	info	Hello and welcome to Prosody version 0.12.4
+May 23 14:40:01 certmanager	error	Error indexing certificate directory ./certs: cannot open ./certs: No such file or directory
+May 23 14:40:01 startup	info	Prosody is using the epoll backend for connection handling
+May 23 14:40:01 localhost:tls	info	Certificates loaded
+May 23 14:40:01 portmanager	info	Activated service 'c2s' on [*]:5224, [::]:5224
+May 23 14:40:01 portmanager	info	Activated service 'c2s_direct_tls' on no ports
+May 23 14:40:01 portmanager	info	Activated service 'legacy_ssl' on no ports
+May 23 14:40:01 portmanager	info	Activated service 's2s' on [*]:5271, [::]:5271
+May 23 14:40:01 portmanager	info	Activated service 's2s_direct_tls' on no ports
+May 23 14:40:07 c2s5641498e4db0	info	Client connected
+May 23 14:40:07 c2s5641498e4db0	info	Stream encrypted (TLSv1.3 with TLS_AES_256_GCM_SHA384)
+May 23 14:40:07 c2s5641498e4db0	info	Authenticated as amab_tl_a0@localhost
+May 23 14:40:07 c2s5641498f3f40	info	Client connected
+May 23 14:40:07 c2s5641498f3f40	info	Stream encrypted (TLSv1.3 with TLS_AES_256_GCM_SHA384)
+May 23 14:40:07 c2s5641498f3f40	info	User account created: amab_tl_b0@localhost
+May 23 14:40:07 c2s5641498f3f40	info	Authenticated as amab_tl_b0@localhost
+May 23 14:40:07 c2s56414991f960	info	Client connected
+May 23 14:40:07 c2s56414991f960	info	Stream encrypted (TLSv1.3 with TLS_AES_256_GCM_SHA384)
+May 23 14:40:07 c2s56414991f960	info	User account created: amab_tl_c0@localhost
+May 23 14:40:07 c2s56414991f960	info	Authenticated as amab_tl_c0@localhost
+May 23 14:40:07 c2s564149929cd0	info	Client connected
+May 23 14:40:07 c2s564149929cd0	info	Stream encrypted (TLSv1.3 with TLS_AES_256_GCM_SHA384)
+May 23 14:40:07 c2s564149929cd0	info	User account created: amab_sens_a0@localhost
+May 23 14:40:07 c2s564149929cd0	info	Authenticated as amab_sens_a0@localhost
+May 23 14:40:07 c2s564149904ac0	info	Client connected
+May 23 14:40:07 c2s564149904ac0	info	Stream encrypted (TLSv1.3 with TLS_AES_256_GCM_SHA384)
+May 23 14:40:07 c2s564149904ac0	info	User account created: amab_sens_b0@localhost
+May 23 14:40:07 c2s564149904ac0	info	Authenticated as amab_sens_b0@localhost
+May 23 14:40:07 c2s56414992d450	info	Client connected
+May 23 14:40:07 c2s56414992d450	info	Stream encrypted (TLSv1.3 with TLS_AES_256_GCM_SHA384)
+May 23 14:40:07 c2s56414992d450	info	User account created: amab_sens_c0@localhost
+May 23 14:40:07 c2s56414992d450	info	Authenticated as amab_sens_c0@localhost
+May 23 14:40:07 c2s56414994edf0	info	Client connected
+May 23 14:40:07 c2s56414994edf0	info	Stream encrypted (TLSv1.3 with TLS_AES_256_GCM_SHA384)
+May 23 14:40:07 c2s56414994edf0	info	User account created: amab_manager@localhost
+May 23 14:40:07 c2s56414994edf0	info	Authenticated as amab_manager@localhost
+May 23 14:40:07 c2s564149949e20	info	Client connected
+May 23 14:40:07 c2s564149949e20	info	Stream encrypted (TLSv1.3 with TLS_AES_256_GCM_SHA384)
+May 23 14:40:07 c2s564149949e20	info	User account created: amab_amb_1@localhost
+May 23 14:40:07 c2s564149949e20	info	Authenticated as amab_amb_1@localhost
+May 23 14:43:16 c2s5641498e4db0	info	Client disconnected: connection closed
+May 23 14:43:16 c2s5641498f3f40	info	Client disconnected: connection closed
+May 23 14:43:16 c2s56414991f960	info	Client disconnected: connection closed
+May 23 14:43:16 c2s564149929cd0	info	Client disconnected: connection closed
+May 23 14:43:16 c2s564149904ac0	info	Client disconnected: connection closed
+May 23 14:43:16 c2s56414992d450	info	Client disconnected: connection closed
+May 23 14:43:16 c2s56414994edf0	info	Client disconnected: connection closed
+May 23 14:43:16 c2s564149949e20	info	Client disconnected: connection closed
+May 23 14:43:16 mod_posix	info	Received SIGHUP
+May 23 14:43:16 startup	info	Reloading configuration file
+May 23 14:43:16 startup	error	Couldn't read the config file when trying to reload: my_prosody.cfg.lua: No such file or directory
+May 23 14:43:45 c2s56414994b8c0	info	Client connected
+May 23 14:43:45 c2s56414994b8c0	info	Stream encrypted (TLSv1.3 with TLS_AES_256_GCM_SHA384)
+May 23 14:43:45 c2s56414994b8c0	info	Authenticated as amab_tl_a0@localhost
+May 23 14:43:45 c2s5641498aaf60	info	Client connected
+May 23 14:43:45 c2s5641498aaf60	info	Stream encrypted (TLSv1.3 with TLS_AES_256_GCM_SHA384)
+May 23 14:43:45 c2s5641498aaf60	info	Authenticated as amab_tl_b0@localhost
+May 23 14:43:45 c2s564149932e20	info	Client connected
+May 23 14:43:45 c2s564149932e20	info	Stream encrypted (TLSv1.3 with TLS_AES_256_GCM_SHA384)
+May 23 14:43:45 c2s564149932e20	info	Authenticated as amab_tl_c0@localhost
+May 23 14:43:45 c2s5641499593b0	info	Client connected
+May 23 14:43:45 c2s5641499593b0	info	Stream encrypted (TLSv1.3 with TLS_AES_256_GCM_SHA384)
+May 23 14:43:45 c2s5641499593b0	info	Authenticated as amab_sens_a0@localhost
+May 23 14:43:45 c2s56414994e270	info	Client connected
+May 23 14:43:45 c2s56414994e270	info	Stream encrypted (TLSv1.3 with TLS_AES_256_GCM_SHA384)
+May 23 14:43:45 c2s56414994e270	info	Authenticated as amab_sens_b0@localhost
+May 23 14:43:45 c2s56414994ca60	info	Client connected
+May 23 14:43:45 c2s56414994ca60	info	Stream encrypted (TLSv1.3 with TLS_AES_256_GCM_SHA384)
+May 23 14:43:45 c2s56414994ca60	info	Authenticated as amab_sens_c0@localhost
+May 23 14:43:45 c2s56414993e220	info	Client connected
+May 23 14:43:45 c2s56414993e220	info	Stream encrypted (TLSv1.3 with TLS_AES_256_GCM_SHA384)
+May 23 14:43:45 c2s56414993e220	info	Authenticated as amab_manager@localhost
+May 23 14:43:46 c2s56414976c030	info	Client connected
+May 23 14:43:46 c2s56414976c030	info	Stream encrypted (TLSv1.3 with TLS_AES_256_GCM_SHA384)
+May 23 14:43:46 c2s56414976c030	info	Authenticated as amab_amb_1@localhost
+May 23 14:46:07 c2s56414976c030	info	Client disconnected: unexpected eof while reading
+May 23 14:46:07 c2s56414994b8c0	info	Client disconnected: unexpected eof while reading
+May 23 14:46:07 c2s5641498aaf60	info	Client disconnected: unexpected eof while reading
+May 23 14:46:07 c2s564149932e20	info	Client disconnected: unexpected eof while reading
+May 23 14:46:07 c2s5641499593b0	info	Client disconnected: unexpected eof while reading
+May 23 14:46:07 c2s56414994e270	info	Client disconnected: unexpected eof while reading
+May 23 14:46:07 c2s56414994ca60	info	Client disconnected: unexpected eof while reading
+May 23 14:46:07 c2s56414993e220	info	Client disconnected: unexpected eof while reading
+May 23 14:48:11 c2s564149935cc0	info	Client connected
+May 23 14:48:11 c2s564149935cc0	info	Stream encrypted (TLSv1.3 with TLS_AES_256_GCM_SHA384)
+May 23 14:48:11 c2s564149935cc0	info	Authenticated as amab_tl_a0@localhost
+May 23 14:48:11 c2s564149907d80	info	Client connected
+May 23 14:48:11 c2s564149907d80	info	Stream encrypted (TLSv1.3 with TLS_AES_256_GCM_SHA384)
+May 23 14:48:11 c2s564149907d80	info	Authenticated as amab_tl_b0@localhost
+May 23 14:48:11 c2s56414993ff80	info	Client connected
+May 23 14:48:11 c2s56414993ff80	info	Stream encrypted (TLSv1.3 with TLS_AES_256_GCM_SHA384)
+May 23 14:48:12 c2s56414993ff80	info	Authenticated as amab_tl_c0@localhost
+May 23 14:48:12 c2s564149904c70	info	Client connected
+May 23 14:48:12 c2s564149904c70	info	Stream encrypted (TLSv1.3 with TLS_AES_256_GCM_SHA384)
+May 23 14:48:12 c2s564149904c70	info	Authenticated as amab_sens_a0@localhost
+May 23 14:48:12 c2s564149674d60	info	Client connected
+May 23 14:48:12 c2s564149674d60	info	Stream encrypted (TLSv1.3 with TLS_AES_256_GCM_SHA384)
+May 23 14:48:12 c2s564149674d60	info	Authenticated as amab_sens_b0@localhost
+May 23 14:48:12 c2s5641499632e0	info	Client connected
+May 23 14:48:12 c2s5641499632e0	info	Stream encrypted (TLSv1.3 with TLS_AES_256_GCM_SHA384)
+May 23 14:48:12 c2s5641499632e0	info	Authenticated as amab_sens_c0@localhost
+May 23 14:48:12 c2s564149963500	info	Client connected
+May 23 14:48:12 c2s564149963500	info	Stream encrypted (TLSv1.3 with TLS_AES_256_GCM_SHA384)
+May 23 14:48:12 c2s564149963500	info	Authenticated as amab_manager@localhost
+May 23 14:48:12 c2s5641498f0e90	info	Client connected
+May 23 14:48:12 c2s5641498f0e90	info	Stream encrypted (TLSv1.3 with TLS_AES_256_GCM_SHA384)
+May 23 14:48:12 c2s5641498f0e90	info	Authenticated as amab_amb_1@localhost
+May 23 14:48:21 c2s564149905fc0	info	Client connected
+May 23 14:48:21 c2s564149905fc0	info	Stream encrypted (TLSv1.3 with TLS_AES_256_GCM_SHA384)
+May 23 14:48:21 c2s564149905fc0	info	User account created: amab_amb_2@localhost
+May 23 14:48:21 c2s564149905fc0	info	Authenticated as amab_amb_2@localhost
+May 23 14:48:32 c2s564149929e20	info	Client connected
+May 23 14:48:32 c2s564149929e20	info	Stream encrypted (TLSv1.3 with TLS_AES_256_GCM_SHA384)
+May 23 14:48:32 c2s564149929e20	info	User account created: amab_amb_3@localhost
+May 23 14:48:32 c2s564149929e20	info	Authenticated as amab_amb_3@localhost
+May 23 14:48:41 c2s56414992a2d0	info	Client connected
+May 23 14:48:41 c2s56414992a2d0	info	Stream encrypted (TLSv1.3 with TLS_AES_256_GCM_SHA384)
+May 23 14:48:41 c2s56414992a2d0	info	User account created: amab_amb_4@localhost
+May 23 14:48:41 c2s56414992a2d0	info	Authenticated as amab_amb_4@localhost
+May 23 14:48:50 c2s564149993bc0	info	Client connected
+May 23 14:48:50 c2s564149993bc0	info	Stream encrypted (TLSv1.3 with TLS_AES_256_GCM_SHA384)
+May 23 14:48:50 c2s564149993bc0	info	User account created: amab_amb_5@localhost
+May 23 14:48:50 c2s564149993bc0	info	Authenticated as amab_amb_5@localhost
+May 23 14:49:01 c2s56414995aae0	info	Client connected
+May 23 14:49:01 c2s56414995aae0	info	Stream encrypted (TLSv1.3 with TLS_AES_256_GCM_SHA384)
+May 23 14:49:02 c2s56414995aae0	info	User account created: amab_amb_6@localhost
+May 23 14:49:02 c2s56414995aae0	info	Authenticated as amab_amb_6@localhost
+May 23 14:49:10 c2s5641499acd10	info	Client connected
+May 23 14:49:10 c2s5641499acd10	info	Stream encrypted (TLSv1.3 with TLS_AES_256_GCM_SHA384)
+May 23 14:49:10 c2s5641499acd10	info	User account created: amab_amb_7@localhost
+May 23 14:49:10 c2s5641499acd10	info	Authenticated as amab_amb_7@localhost
+May 23 14:49:12 c2s564149935cc0	info	Client disconnected: connection closed
+May 23 14:49:12 c2s564149907d80	info	Client disconnected: connection closed
+May 23 14:49:12 c2s56414993ff80	info	Client disconnected: connection closed
+May 23 14:49:12 c2s564149904c70	info	Client disconnected: connection closed
+May 23 14:49:12 c2s564149674d60	info	Client disconnected: connection closed
+May 23 14:49:12 c2s5641499632e0	info	Client disconnected: connection closed
+May 23 14:49:12 c2s564149963500	info	Client disconnected: connection closed
+May 23 14:49:12 c2s5641498f0e90	info	Client disconnected: connection closed
+May 23 14:49:12 c2s564149905fc0	info	Client disconnected: connection closed
+May 23 14:49:12 c2s564149929e20	info	Client disconnected: connection closed
+May 23 14:49:12 c2s56414992a2d0	info	Client disconnected: connection closed
+May 23 14:49:12 c2s564149993bc0	info	Client disconnected: connection closed
+May 23 14:49:12 c2s56414995aae0	info	Client disconnected: connection closed
+May 23 14:49:12 c2s5641499acd10	info	Client disconnected: connection closed
+May 23 14:53:38 c2s5641498df7f0	info	Client connected
+May 23 14:53:38 c2s5641498df7f0	info	Stream encrypted (TLSv1.3 with TLS_AES_256_GCM_SHA384)
+May 23 14:53:38 c2s5641498df7f0	info	Authenticated as amab_tl_a0@localhost
+May 23 14:53:38 c2s564149961040	info	Client connected
+May 23 14:53:38 c2s564149961040	info	Stream encrypted (TLSv1.3 with TLS_AES_256_GCM_SHA384)
+May 23 14:53:38 c2s564149961040	info	Authenticated as amab_tl_b0@localhost
+May 23 14:53:38 c2s564149994350	info	Client connected
+May 23 14:53:38 c2s564149994350	info	Stream encrypted (TLSv1.3 with TLS_AES_256_GCM_SHA384)
+May 23 14:53:38 c2s564149994350	info	Authenticated as amab_tl_c0@localhost
+May 23 14:53:38 c2s56414994d250	info	Client connected
+May 23 14:53:38 c2s56414994d250	info	Stream encrypted (TLSv1.3 with TLS_AES_256_GCM_SHA384)
+May 23 14:53:38 c2s56414994d250	info	Authenticated as amab_sens_a0@localhost
+May 23 14:53:38 c2s564149907930	info	Client connected
+May 23 14:53:38 c2s564149907930	info	Stream encrypted (TLSv1.3 with TLS_AES_256_GCM_SHA384)
+May 23 14:53:38 c2s564149907930	info	Authenticated as amab_sens_b0@localhost
+May 23 14:53:38 c2s5641499a0970	info	Client connected
+May 23 14:53:38 c2s5641499a0970	info	Stream encrypted (TLSv1.3 with TLS_AES_256_GCM_SHA384)
+May 23 14:53:39 c2s5641499a0970	info	Authenticated as amab_sens_c0@localhost
+May 23 14:53:39 c2s564149910ee0	info	Client connected
+May 23 14:53:39 c2s564149910ee0	info	Stream encrypted (TLSv1.3 with TLS_AES_256_GCM_SHA384)
+May 23 14:53:39 c2s564149910ee0	info	Authenticated as amab_manager@localhost
+May 23 14:53:39 c2s56414997dda0	info	Client connected
+May 23 14:53:39 c2s56414997dda0	info	Stream encrypted (TLSv1.3 with TLS_AES_256_GCM_SHA384)
+May 23 14:53:39 c2s56414997dda0	info	Authenticated as amab_amb_1@localhost
+May 23 14:53:50 c2s564149943de0	info	Client connected
+May 23 14:53:50 c2s564149943de0	info	Stream encrypted (TLSv1.3 with TLS_AES_256_GCM_SHA384)
+May 23 14:53:50 c2s564149943de0	info	Authenticated as amab_amb_2@localhost
+May 23 14:53:59 c2s5641498f5550	info	Client connected
+May 23 14:53:59 c2s5641498f5550	info	Stream encrypted (TLSv1.3 with TLS_AES_256_GCM_SHA384)
+May 23 14:53:59 c2s5641498f5550	info	Authenticated as amab_amb_3@localhost
+May 23 14:54:08 c2s56414993f6b0	info	Client connected
+May 23 14:54:08 c2s56414993f6b0	info	Stream encrypted (TLSv1.3 with TLS_AES_256_GCM_SHA384)
+May 23 14:54:08 c2s56414993f6b0	info	Authenticated as amab_amb_4@localhost
+May 23 14:54:19 c2s5641499887b0	info	Client connected
+May 23 14:54:19 c2s5641499887b0	info	Stream encrypted (TLSv1.3 with TLS_AES_256_GCM_SHA384)
+May 23 14:54:19 c2s5641499887b0	info	Authenticated as amab_amb_5@localhost
+May 23 14:54:28 c2s564149963230	info	Client connected
+May 23 14:54:28 c2s564149963230	info	Stream encrypted (TLSv1.3 with TLS_AES_256_GCM_SHA384)
+May 23 14:54:28 c2s564149963230	info	Authenticated as amab_amb_6@localhost
+May 23 14:54:37 c2s564149920510	info	Client connected
+May 23 14:54:37 c2s564149920510	info	Stream encrypted (TLSv1.3 with TLS_AES_256_GCM_SHA384)
+May 23 14:54:37 c2s564149920510	info	Authenticated as amab_amb_7@localhost
+May 23 14:54:45 c2s5641499359d0	info	Client connected
+May 23 14:54:45 c2s5641499359d0	info	Stream encrypted (TLSv1.3 with TLS_AES_256_GCM_SHA384)
+May 23 14:54:45 c2s5641499359d0	info	User account created: amab_amb_8@localhost
+May 23 14:54:45 c2s5641499359d0	info	Authenticated as amab_amb_8@localhost
+May 23 14:54:57 c2s5641499c1ba0	info	Client connected
+May 23 14:54:57 c2s5641499c1ba0	info	Stream encrypted (TLSv1.3 with TLS_AES_256_GCM_SHA384)
+May 23 14:54:57 c2s5641499c1ba0	info	User account created: amab_amb_9@localhost
+May 23 14:54:57 c2s5641499c1ba0	info	Authenticated as amab_amb_9@localhost
+May 23 14:55:06 c2s5641499bfcd0	info	Client connected
+May 23 14:55:06 c2s5641499bfcd0	info	Stream encrypted (TLSv1.3 with TLS_AES_256_GCM_SHA384)
+May 23 14:55:06 c2s5641499bfcd0	info	User account created: amab_amb_10@localhost
+May 23 14:55:06 c2s5641499bfcd0	info	Authenticated as amab_amb_10@localhost
+May 23 14:56:14 c2s5641499d6ed0	info	Client connected
+May 23 14:56:14 c2s5641499d6ed0	info	Stream encrypted (TLSv1.3 with TLS_AES_256_GCM_SHA384)
+May 23 14:56:14 c2s5641499d6ed0	info	Authenticated as amab_tl_a0@localhost
+May 23 14:56:14 c2s5641499d4f70	info	Client connected
+May 23 14:56:14 c2s5641499d4f70	info	Stream encrypted (TLSv1.3 with TLS_AES_256_GCM_SHA384)
+May 23 14:56:14 c2s5641499d4f70	info	Authenticated as amab_tl_b0@localhost
+May 23 14:56:14 c2s5641499caaf0	info	Client connected
+May 23 14:56:14 c2s5641499caaf0	info	Stream encrypted (TLSv1.3 with TLS_AES_256_GCM_SHA384)
+May 23 14:56:14 c2s5641499caaf0	info	Authenticated as amab_tl_c0@localhost
+May 23 14:56:14 c2s5641499fd3c0	info	Client connected
+May 23 14:56:14 c2s5641499fd3c0	info	Stream encrypted (TLSv1.3 with TLS_AES_256_GCM_SHA384)
+May 23 14:56:14 c2s5641499fd3c0	info	Authenticated as amab_sens_a0@localhost
+May 23 14:56:15 c2s5641499da4f0	info	Client connected
+May 23 14:56:15 c2s5641499da4f0	info	Stream encrypted (TLSv1.3 with TLS_AES_256_GCM_SHA384)
+May 23 14:56:15 c2s5641499da4f0	info	Authenticated as amab_sens_b0@localhost
+May 23 14:56:15 c2s564149a12cb0	info	Client connected
+May 23 14:56:15 c2s564149a12cb0	info	Stream encrypted (TLSv1.3 with TLS_AES_256_GCM_SHA384)
+May 23 14:56:15 c2s564149a12cb0	info	Authenticated as amab_sens_c0@localhost
+May 23 14:56:15 c2s564149a20ab0	info	Client connected
+May 23 14:56:15 c2s564149a20ab0	info	Stream encrypted (TLSv1.3 with TLS_AES_256_GCM_SHA384)
+May 23 14:56:15 c2s564149a20ab0	info	Authenticated as amab_manager@localhost
+May 23 14:56:15 c2s5641499efe70	info	Client connected
+May 23 14:56:15 c2s5641499efe70	info	Stream encrypted (TLSv1.3 with TLS_AES_256_GCM_SHA384)
+May 23 14:56:15 c2s5641499efe70	info	Authenticated as amab_amb_1@localhost
+May 23 14:56:24 c2s564149a38d80	info	Client connected
+May 23 14:56:24 c2s564149a38d80	info	Stream encrypted (TLSv1.3 with TLS_AES_256_GCM_SHA384)
+May 23 14:56:24 c2s564149a38d80	info	Authenticated as amab_amb_2@localhost
+May 23 14:56:28 c2s564149a38d80	info	Client disconnected: unexpected eof while reading
+May 23 14:56:28 c2s5641499d6ed0	info	Client disconnected: unexpected eof while reading
+May 23 14:56:28 c2s5641499d4f70	info	Client disconnected: unexpected eof while reading
+May 23 14:56:28 c2s5641499caaf0	info	Client disconnected: unexpected eof while reading
+May 23 14:56:28 c2s5641499fd3c0	info	Client disconnected: unexpected eof while reading
+May 23 14:56:28 c2s5641499da4f0	info	Client disconnected: unexpected eof while reading
+May 23 14:56:28 c2s564149a12cb0	info	Client disconnected: unexpected eof while reading
+May 23 14:56:28 c2s564149a20ab0	info	Client disconnected: unexpected eof while reading
+May 23 14:56:28 c2s5641499efe70	info	Client disconnected: unexpected eof while reading
+May 23 14:58:45 c2s5641498df7f0	info	Client disconnected: connection closed
+May 23 14:58:45 c2s564149961040	info	Client disconnected: connection closed
+May 23 14:58:45 c2s564149994350	info	Client disconnected: connection closed
+May 23 14:58:45 c2s56414994d250	info	Client disconnected: connection closed
+May 23 14:58:45 c2s564149907930	info	Client disconnected: connection closed
+May 23 14:58:45 c2s5641499a0970	info	Client disconnected: connection closed
+May 23 14:58:45 c2s564149910ee0	info	Client disconnected: connection closed
+May 23 14:58:45 c2s56414997dda0	info	Client disconnected: connection closed
+May 23 14:58:45 c2s564149943de0	info	Client disconnected: connection closed
+May 23 14:58:45 c2s5641498f5550	info	Client disconnected: connection closed
+May 23 14:58:45 c2s56414993f6b0	info	Client disconnected: connection closed
+May 23 14:58:45 c2s5641499887b0	info	Client disconnected: connection closed
+May 23 14:58:45 c2s564149963230	info	Client disconnected: connection closed
+May 23 14:58:45 c2s564149920510	info	Client disconnected: connection closed
+May 23 14:58:45 c2s5641499359d0	info	Client disconnected: connection closed
+May 23 14:58:45 c2s5641499c1ba0	info	Client disconnected: connection closed
+May 23 14:58:45 c2s5641499bfcd0	info	Client disconnected: connection closed
+May 23 14:59:35 c2s56414997dae0	info	Client connected
+May 23 14:59:35 c2s56414997dae0	info	Stream encrypted (TLSv1.3 with TLS_AES_256_GCM_SHA384)
+May 23 14:59:35 c2s56414997dae0	info	Authenticated as amab_tl_a0@localhost
+May 23 14:59:35 c2s5641498f0420	info	Client connected
+May 23 14:59:35 c2s5641498f0420	info	Stream encrypted (TLSv1.3 with TLS_AES_256_GCM_SHA384)
+May 23 14:59:35 c2s5641498f0420	info	Authenticated as amab_tl_b0@localhost
+May 23 14:59:35 c2s5641498c2fc0	info	Client connected
+May 23 14:59:35 c2s5641498c2fc0	info	Stream encrypted (TLSv1.3 with TLS_AES_256_GCM_SHA384)
+May 23 14:59:35 c2s5641498c2fc0	info	Authenticated as amab_tl_c0@localhost
+May 23 14:59:35 c2s5641499593f0	info	Client connected
+May 23 14:59:35 c2s5641499593f0	info	Stream encrypted (TLSv1.3 with TLS_AES_256_GCM_SHA384)
+May 23 14:59:35 c2s5641499593f0	info	Authenticated as amab_sens_a0@localhost
+May 23 14:59:35 c2s5641498f43b0	info	Client connected
+May 23 14:59:35 c2s5641498f43b0	info	Stream encrypted (TLSv1.3 with TLS_AES_256_GCM_SHA384)
+May 23 14:59:36 c2s5641498f43b0	info	Authenticated as amab_sens_b0@localhost
+May 23 14:59:36 c2s5641499362f0	info	Client connected
+May 23 14:59:36 c2s5641499362f0	info	Stream encrypted (TLSv1.3 with TLS_AES_256_GCM_SHA384)
+May 23 14:59:36 c2s5641499362f0	info	Authenticated as amab_sens_c0@localhost
+May 23 14:59:36 c2s564149a43560	info	Client connected
+May 23 14:59:36 c2s564149a43560	info	Stream encrypted (TLSv1.3 with TLS_AES_256_GCM_SHA384)
+May 23 14:59:36 c2s564149a43560	info	Authenticated as amab_manager@localhost
+May 23 15:01:59 c2s56414997dae0	info	Client disconnected: connection closed
+May 23 15:01:59 c2s5641498f0420	info	Client disconnected: connection closed
+May 23 15:01:59 c2s5641498c2fc0	info	Client disconnected: connection closed
+May 23 15:01:59 c2s5641499593f0	info	Client disconnected: connection closed
+May 23 15:01:59 c2s5641498f43b0	info	Client disconnected: connection closed
+May 23 15:01:59 c2s5641499362f0	info	Client disconnected: connection closed
+May 23 15:01:59 c2s564149a43560	info	Client disconnected: connection closed
+May 24 00:27:55 c2s5641498f4bc0	info	Client connected
+May 24 00:27:55 c2s5641498f4bc0	info	Stream encrypted (TLSv1.3 with TLS_AES_256_GCM_SHA384)
+May 24 00:27:55 c2s5641498f4bc0	info	Authenticated as amab_tl_a0@localhost
+May 24 00:27:55 c2s5641499d2160	info	Client connected
+May 24 00:27:55 c2s5641499d2160	info	Stream encrypted (TLSv1.3 with TLS_AES_256_GCM_SHA384)
+May 24 00:27:55 c2s5641499d2160	info	Authenticated as amab_tl_b0@localhost
+May 24 00:27:55 c2s564149910640	info	Client connected
+May 24 00:27:55 c2s564149910640	info	Stream encrypted (TLSv1.3 with TLS_AES_256_GCM_SHA384)
+May 24 00:27:55 c2s564149910640	info	Authenticated as amab_tl_c0@localhost
+May 24 00:27:55 c2s5641498e4c80	info	Client connected
+May 24 00:27:55 c2s5641498e4c80	info	Stream encrypted (TLSv1.3 with TLS_AES_256_GCM_SHA384)
+May 24 00:27:55 c2s5641498e4c80	info	Authenticated as amab_sens_a0@localhost
+May 24 00:27:55 c2s5641498d87c0	info	Client connected
+May 24 00:27:55 c2s5641498d87c0	info	Stream encrypted (TLSv1.3 with TLS_AES_256_GCM_SHA384)
+May 24 00:27:55 c2s5641498d87c0	info	Authenticated as amab_sens_b0@localhost
+May 24 00:27:55 c2s564149a192c0	info	Client connected
+May 24 00:27:55 c2s564149a192c0	info	Stream encrypted (TLSv1.3 with TLS_AES_256_GCM_SHA384)
+May 24 00:27:55 c2s564149a192c0	info	Authenticated as amab_sens_c0@localhost
+May 24 00:27:55 c2s56414995ef60	info	Client connected
+May 24 00:27:55 c2s56414995ef60	info	Stream encrypted (TLSv1.3 with TLS_AES_256_GCM_SHA384)
+May 24 00:27:55 c2s56414995ef60	info	Authenticated as amab_manager@localhost
+May 24 00:30:39 c2s5641498f4bc0	info	Client disconnected: connection closed
+May 24 00:30:39 c2s5641499d2160	info	Client disconnected: connection closed
+May 24 00:30:39 c2s564149910640	info	Client disconnected: connection closed
+May 24 00:30:39 c2s5641498e4c80	info	Client disconnected: connection closed
+May 24 00:30:39 c2s5641498d87c0	info	Client disconnected: connection closed
+May 24 00:30:39 c2s564149a192c0	info	Client disconnected: connection closed
+May 24 00:30:39 c2s56414995ef60	info	Client disconnected: connection closed
