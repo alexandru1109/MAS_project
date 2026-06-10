@@ -10,6 +10,7 @@ class AmbulanceAgent(Agent):
         self.veh_id = veh_id
         self.tl_map = tl_map
         self.cleared_edges = set()
+        self.requested_tls = set()
 
     class DriveBehaviour(PeriodicBehaviour):
         async def run(self):
@@ -22,6 +23,34 @@ class AmbulanceAgent(Agent):
                         amb_route = traci.vehicle.getRoute(self.agent.veh_id)
                         amb_route_idx = traci.vehicle.getRouteIndex(self.agent.veh_id)
                         
+                        # Request green only for the immediate proximity
+                        active_edges = [current_edge]
+                        if amb_route_idx + 1 < len(amb_route):
+                            active_edges.append(amb_route[amb_route_idx + 1])
+                        
+                        for edge in active_edges:
+                            if edge in self.agent.tl_map and edge not in self.agent.requested_tls:
+                                target_tl = self.agent.tl_map[edge]
+                                print(f"[{self.agent.veh_id}] 🚑 Cer verde in avans pentru {edge} de la {target_tl.split('@')[0]}!")
+                                msg = Message(to=target_tl)
+                                msg.set_metadata("performative", "request")
+                                msg.body = json.dumps({"type": "emergency", "action": "start"})
+                                await self.send(msg)
+                                self.agent.requested_tls.add(edge)
+
+                        # Check for edges we have passed
+                        for edge in list(self.agent.requested_tls):
+                            if edge not in active_edges:
+                                target_tl = self.agent.tl_map[edge]
+                                print(f"[{self.agent.veh_id}] 🚑 Am trecut de {edge}, eliberez semaforul {target_tl.split('@')[0]}!")
+                                msg = Message(to=target_tl)
+                                msg.set_metadata("performative", "request")
+                                msg.body = json.dumps({"type": "emergency", "action": "stop"})
+                                await self.send(msg)
+                                self.agent.requested_tls.remove(edge)
+                                self.agent.cleared_edges.add(edge)
+                        
+                        # Force vehicles on the same edge to yield priority
                         vehicles_on_edge = traci.edge.getLastStepVehicleIDs(current_edge)
                         for v in vehicles_on_edge:
                             if v != self.agent.veh_id:
@@ -41,21 +70,26 @@ class AmbulanceAgent(Agent):
                                             new_route = amb_route[amb_route_idx:]
                                             traci.vehicle.setRoute(v, new_route)
                                             print(f"[{self.agent.veh_id}] 🚓 Am anulat intoarcerea in sens pentru {v}. Eliberam banda!")
-                    except:
-                        pass
+                                            
+                                    # Lăsăm SUMO să gestioneze nativ schimbarea benzilor pentru vehiculele de urgență (rescue lane).
+                                    # Am eliminat forțarea încetinirii (slowDown) deoarece bloca ambulanța în spatele lor.
+
+                    except Exception as e:
+                        print(f"[{self.agent.veh_id}] Inner Exception: {e}")
+                else:
+                    if self.agent.requested_tls:
+                        print(f"[{self.agent.veh_id}] 🏁 Ambulanta a iesit din retea. Eliberez ultimele semafoare: {self.agent.requested_tls}")
+                        for edge in list(self.agent.requested_tls):
+                            target_tl = self.agent.tl_map[edge]
+                            msg = Message(to=target_tl)
+                            msg.set_metadata("performative", "request")
+                            msg.body = json.dumps({"type": "emergency", "action": "stop"})
+                            await self.send(msg)
+                            self.agent.requested_tls.remove(edge)
+                        self.kill()
                     
-                    if current_edge in self.agent.tl_map and current_edge not in self.agent.cleared_edges:
-                        target_tl = self.agent.tl_map[current_edge]
-                        print(f"[{self.agent.veh_id}] 🚑 URGENTA pe {current_edge}! Cer verde imediat de la {target_tl.split('@')[0]}!")
-                        
-                        msg = Message(to=target_tl)
-                        msg.set_metadata("performative", "request")
-                        msg.body = json.dumps({"type": "emergency"})
-                        await self.send(msg)
-                        
-                        self.agent.cleared_edges.add(current_edge)
-            except:
-                pass
+            except Exception as e:
+                print(f"[{self.agent.veh_id}] Outer Exception: {e}")
 
     async def setup(self):
         self.add_behaviour(self.DriveBehaviour(period=0.5))

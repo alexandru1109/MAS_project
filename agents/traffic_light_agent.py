@@ -11,6 +11,8 @@ class TrafficLightAgent(Agent):
         self.halted_cars = 0
         self.threshold = 6
         self.emergency = False
+        self.emergency_start_time = 0
+        self.last_force_time = 0
 
     class ReceiverBehaviour(CyclicBehaviour):
         async def run(self):
@@ -26,28 +28,41 @@ class TrafficLightAgent(Agent):
                     self.agent.threshold = 3 if data["mode"] == "rush_hour" else 6
 
                 elif perf == "request" and data["type"] == "emergency":
-                    print(f"[{self.agent.tl_id}] 🚨 Am primit cerere de urgenta! Trecem pe VERDE fortat.")
-                    self.agent.emergency = True
-                    try:
-                        traci.trafficlight.setPhase(self.agent.tl_id, 0)
-                    except: pass
+                    if data.get("action", "start") == "start":
+                        print(f"[{self.agent.tl_id}] 🚨 Am primit cerere de urgenta! Trecem pe VERDE fortat.")
+                        self.agent.emergency = True
+                        try:
+                            self.agent.emergency_start_time = traci.simulation.getTime()
+                            traci.trafficlight.setPhase(self.agent.tl_id, 2)
+                        except: pass
+                    elif data.get("action") == "stop":
+                        print(f"[{self.agent.tl_id}] ✅ Urgenta a trecut. Revin la program normal.")
+                        self.agent.emergency = False
 
     class ControlBehaviour(PeriodicBehaviour):
         async def run(self):
+            try:
+                now = traci.simulation.getTime()
+            except:
+                now = 0
+
             if self.agent.emergency:
-                if self.agent.halted_cars == 0:
+                if now - self.agent.emergency_start_time > 60:
+                    print(f"[{self.agent.tl_id}] ⚠️ TIMEOUT urgenta! Opresc verdele fortat dupa 60s.")
                     self.agent.emergency = False
                 else:
                     try:
-                        traci.trafficlight.setPhase(self.agent.tl_id, 0)
+                        traci.trafficlight.setPhase(self.agent.tl_id, 2)
                     except: pass
-                return
+                    return
 
             try:
                 current = traci.trafficlight.getPhase(self.agent.tl_id)
-                if self.agent.halted_cars > self.agent.threshold and current != 0:
-                    print(f"[{self.agent.tl_id}] 🚦 Coada ({self.agent.halted_cars}/{self.agent.threshold}). Deschid semaforul.")
-                    traci.trafficlight.setPhase(self.agent.tl_id, 0)
+                if self.agent.halted_cars > self.agent.threshold and current != 2:
+                    if now - self.agent.last_force_time > 45: # 45 seconds cooldown
+                        print(f"[{self.agent.tl_id}] 🚦 Coada ({self.agent.halted_cars}/{self.agent.threshold}). Deschid semaforul.")
+                        traci.trafficlight.setPhase(self.agent.tl_id, 2)
+                        self.agent.last_force_time = now
             except: pass
 
     async def setup(self):
